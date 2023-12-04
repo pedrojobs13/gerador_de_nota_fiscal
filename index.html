@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NFC</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header>Gerador de Nota fiscal Eletrônica</header>
+    <main class="main_page">
+        <form onsubmit="abrir()" method="post" name="form">
+            <div>
+                <label for="nome_da_empresa">Nome da empresa:</label>
+                <input type="text" id="nome_da_empresa" name="nome_da_empresa" />
+            </div>
+            <div>
+                <label for="endereco">Endereço da empresa:</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div>
+                <label for="cnpf">CNPJ:</label>
+                <input type="text" id="cnpf" name="cnpf" />
+            </div>
+
+            <div>
+                <label for="nome_do_cliente">Nome do cliente:</label>
+                <input type="text" id="nome_do_cliente" />
+            </div>
+            <div>
+                <label for="cpf">CPF:</label>
+                <input id="cpf" type="text" name="cpf"></input>
+            </div>
+            <div>
+                <label for="forma_de_pagamento">Forma de Pagamento:</label>
+                <select name="forma_de_pagamento">
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de crédito">Cartão de crédito</option>
+                    <option value="Boleto Bancário">Boleto Bancário</option>
+                </select>
+
+            </div>
+            <div>
+                <label for="valor_total">Valor total:</label>
+                <input id="valor_total" type="number" name="valor_total" min="1" step="any"></input>
+            </div>
+
+            <div class="button">
+                <button type="button" onclick="abrir()">Gerar</button>
+            </div>
+        </form>
+
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
